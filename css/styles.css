@@ -10,6 +10,7 @@
     --clear-white:rgba(100%,100%,100%,60%);
     --logo-color:#000000;
     --icon-color:#AFB1B8;
+    --footer-link-backgraund:rgba(255, 255, 255, 0.1);
     --button-hover-color:#188CE8;
     --shadow-color:rgba(0, 0, 0, 0.25);
     --logo-font:"Raleway",sans-serif;
@@ -86,6 +87,7 @@ button {
 
 .link {
     text-decoration: none;
+    color:inherit;
 }
 
 /* =========HEADER========= */
@@ -145,16 +147,12 @@ button {
     color: var(--primary-color);
 }
 
-.current,
 .navigation-link:hover,
 .navigation-link:focus,
 .coord-link:hover,
 .coord-link:focus {
     color: var(--accent-color);
-    /* fill: var(--accent-color); */
-    fill:currentColor;
 }
-
 
 .coord-list {
     display: flex;
@@ -162,15 +160,13 @@ button {
     align-items: center;
 }
 
-/* .coord-item {
-    display: flex;
-} */
-
 .coord-item:not(:last-child) {
     margin-right: 50px;
 }
 
 .coord-link {
+    display: flex;
+    align-items: center;
     font-family: var(--main-font);
     font-weight: var(--medium);
     font-size: var(--primary-text-size);
@@ -199,6 +195,10 @@ button {
 
 .solutions {
     padding: 200px 0px;
+    max-width: 1600px;
+    height: 600px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
     background-color: var(--dark-gray);
     background-image:linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)), url(../imeges/section-img/img.jpg);
     background-size: cover;
@@ -383,12 +383,6 @@ button {
     margin-bottom: 16px;
 }
 
-.social-list-icon {
-    width: 20px;
-    height: 20px;
-    fill: var(--icon-color);
-}
-
 .social-list {
     display: flex;
     justify-content: center;
@@ -403,22 +397,34 @@ button {
     width: 44px;
     height: 44px;
     border-radius: 50%;
+    color: var(--icon-color);
+}
+
+.social-list-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
 }
 
 .social-list-link:hover,
 .social-list-link:focus {
     background-color: var(--accent-color);
-}
-
-.social-list-link:hover .social-list-icon,
-.social-list-link:focus .social-list-icon {
-    fill: var(--common-white);
+    color: var(--common-white);
 }
 
 /* =======Секція "Постійні клієнти"======== */
 
+
 .client-link {
-    fill: var(--icon-color);
+    width: 170px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--icon-color);
+    border-radius: 4px;
+    background-color: var(--common-white);
+    color: var(--icon-color);
 }
 
 .clients-title {
@@ -431,18 +437,6 @@ button {
     margin-bottom: 50px;
 }
 
-.client-div {
-    width: 170px;
-    height: 92px;
-    padding: 16px 32px;
-    border: 1px solid var(--icon-color);
-    border-radius: 4px;
-    background-color: var(--common-white);
-
-}
-
-
-
 .client-list {
     display: flex;
     gap:30px;
@@ -451,12 +445,13 @@ button {
 .client-logo {
     width: 106px;
     height: 60px;
+    fill: currentColor;
 }
 
 .client-link:hover,
 .client-link:focus {
+    border-color: var(--accent-color);
     color: var(--accent-color);
-    fill:currentColor;
 }
 
 
@@ -465,6 +460,7 @@ button {
 
 .footer-container {
     display: flex;
+    align-items: baseline;
 }
 
 .logo-address {
@@ -504,7 +500,7 @@ button {
     line-height: 1.71;
     letter-spacing: 0.03em;
 }
-
+.current,
 .footer-address-link:hover,
 .footer-address-link:focus,
 .address-link:hover,
@@ -542,16 +538,11 @@ button {
 
 
 .footer-link {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--footer-link-backgraund);
 }
 
 .footer-icon {
     fill:var(--common-white);
-}
-
-.join {
-    padding-top: 12px;
-    padding-bottom: 40px;
 }
 
 .social-list-title {
@@ -648,12 +639,11 @@ button {
     letter-spacing: 0.03em;
     color: var(--secondary-color);
 }
-.project-link {
-    text-decoration: none;
-    color: inherit;
-}
+ .project-link {
+    display: block;
+} 
 
-.project:hover {
+.project-link:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
